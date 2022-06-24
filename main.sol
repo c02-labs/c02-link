@@ -10,7 +10,7 @@ import '@chainlink/contracts/src/v0.8/ConfirmedOwner.sol';
  * the c02 labs platform.
  * @dev Testnet implementation.
  */
-contract ESGConsumer is ChainlinkClient, ConfirmedOwner {
+contract ESGConsumerDemo is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
     bytes32 private jobId;
@@ -35,7 +35,7 @@ contract ESGConsumer is ChainlinkClient, ConfirmedOwner {
     }
 
     /**
-     * @notice Requests ESG data from c02 endpoint
+     * @notice Requests ESG data from c02 platform endpoint.
      */
     function requestESGData() public returns (bytes32 requestId) {
         Chainlink.Request memory req = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
