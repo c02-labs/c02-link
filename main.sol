@@ -23,10 +23,15 @@ contract ESGConsumer is ChainlinkClient, ConfirmedOwner {
      * @dev NETWORK: RINKEBY
      */
     constructor() ConfirmedOwner(msg.sender) {
+        // LINK Token and Oracle address for the Rinkeby Testnet
         setChainlinkToken(0x01BE23585060835E02B77ef475b0Cc51aA1e0709);
         setChainlinkOracle(0xf3FBB7f3391F62C8fe53f89B41dFC8159EE9653f);
+
+        // jobId with the Http -> JsonParse -> Ethabiencode tasks
         jobId = "7da2702f37fd48e5b1b9a5715e3509b6";
-        fee = (1 * LINK_DIVISIBILITY) / 10; // 0.1 LINK
+
+        // requests on testnets cost 0.1 LINK
+        fee = (1 * LINK_DIVISIBILITY) / 10;
     }
 
     /**
