@@ -20,12 +20,12 @@ contract ESGConsumerDemo is ChainlinkClient, ConfirmedOwner {
     event ObtainedData(bytes32 indexed requestId, bytes rawData);
 
     /**
-     * @dev NETWORK: RINKEBY
+     * @dev NETWORK: GOERLI
      */
     constructor() ConfirmedOwner(msg.sender) {
-        // LINK Token and Oracle address for the Rinkeby Testnet
-        setChainlinkToken(0x01BE23585060835E02B77ef475b0Cc51aA1e0709);
-        setChainlinkOracle(0xf3FBB7f3391F62C8fe53f89B41dFC8159EE9653f);
+        // LINK Token and Oracle address for the Goerli Testnet
+        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
+        setChainlinkOracle(0xCC79157eb46F5624204f47AB42b3906cAA40eaB7);
 
         // jobId with the Http -> JsonParse -> Ethabiencode tasks
         jobId = "7da2702f37fd48e5b1b9a5715e3509b6";
