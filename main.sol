@@ -5,7 +5,7 @@ import '@chainlink/contracts/src/v0.8/ChainlinkClient.sol';
 import '@chainlink/contracts/src/v0.8/ConfirmedOwner.sol';
 
 /**
- * @notice A Chainlink client that fetches and ESG report data from
+ * @notice A Chainlink client that fetches ESG report data from
  * the c02 labs platform.
  * @dev Testnet implementation.
  */
@@ -43,7 +43,7 @@ contract ESGConsumerDemo is ChainlinkClient, ConfirmedOwner {
     function requestReportHash(string memory id) public returns (bytes32 requestId) {
         Chainlink.Request memory req = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
 
-        req.add("get", string.concat("https://tgdsyjp7ib.execute-api.us-east-1.amazonaws.com/miguel/report/", id, "/hash"));
+        req.add("get", string.concat("https://qaz8j911n5.execute-api.us-east-1.amazonaws.com/dev/report/", id, "/hash"));
         req.add("path", "reportHash");
 
         return sendChainlinkRequest(req, fee);
