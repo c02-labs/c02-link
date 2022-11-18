@@ -4,6 +4,12 @@ Hybrid ETH smart contract used for the [c02-labs](https://www.c02-labs.com/) pla
 
 Deployed on the Goerli Testnet.
 
+## License
+
+Copyright (c) 2022 C02 Labs
+
+This project is licensed under the MIT license.
+
 ## Development references
 
 - [Testnet Nodes and Jobs](https://docs.chain.link/docs/any-api-testnet-nodes/)
